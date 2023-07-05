@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do advinha grande</title>
+</head>
+<body>
+    <script>
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+
+    }
+    function sorteia (n) {
+        return numeroPensado = Math.round(Math.random() * n);
+            
+    }
+
+    var numeroPensado = sorteia(10);
+
+    var tentativas = 1;
+    while(tentativas <= 3) {
+        var numeroChutado = parseInt(prompt("Digite um número de 0 a 10 e tente a sorte!!"));
+
+        if (numeroPensado == numeroChutado) {
+                mostra("Uau, você acertou o número!! Número = " + numeroPensado );
+                break;
+        }else {
+
+            if (numeroPensado > numeroChutado) {
+                mostra("Você errou!! O seu número chutado é maior que o número pensado");
+
+            }else {
+                mostra("Você errou!! O seu número chutado é menor que o número pensado");
+            }
+        }   
+
+        tentativas++;
+
+    }
+
+    mostra("FIM");
+    
+    </script>
+</body>
+</html>

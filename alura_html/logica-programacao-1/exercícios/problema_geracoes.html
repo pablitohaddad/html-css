@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema de gerações</title>
+</head>
+<body>
+
+    <h1>Quantas gerações de brasileiros existem aproximadamente?</h1>
+    <script>
+        function pulaLinha() {
+
+            document.wite("<br>");
+
+        }
+        function mostra() {
+
+            document.write(Math.round(quantidadeGeracao) + " gerações existentes no Brasil");
+        }
+
+        var anoInicial = 1500;
+        var anoAtual = 2023;
+        var novaGeracao = 28;
+        var quantidadeGeracao = (anoAtual - anoInicial) / novaGeracao;
+        mostra();
+        
+        pulaLinha();
+
+       
+
+    </script>
+</body>
+</html>

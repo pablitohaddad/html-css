@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media dos eventos</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+
+            document.write("<br><hr><br>");
+
+        }
+        function mostra(texto){
+
+            document.write("<big>" + texto + "</big>");
+            pulaLinha();
+
+        }
+        var nomeMes = prompt("Digite o mês ");
+        var quantidadeEventos = parseInt(prompt("Qual a quantidade de eventos desse mês? "));
+        
+        var numero = 1; 
+        
+        despesaTotal = 0;
+        while (numero <= quantidadeEventos) {
+            var despesa = parseInt(prompt("Informe a quantidade gasta no evento"));
+            despesaTotal = despesaTotal + despesa;
+            numero++;
+       }
+        var mediaDespesas = despesaTotal / quantidadeEventos;
+
+        mostra("A média de despesas de " + nomeMes + " foi de " + mediaDespesas);
+
+        mostra("FIM!");
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Calculadora Simples</title>
+    <style>
+      .calculator {
+        width: 400px;
+        height: 500px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+      }
+      .display {
+        height: 100px;
+        background-color: lightgray;
+        padding-top: 20px;
+      }
+      .keys {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .key {
+        width: 75px;
+        height: 75px;
+        border: 1px solid gray;
+        background-color: white;
+        margin: 10px;
+        float: left;
+        font-size: 30px;
+        line-height: 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="display" disabled />
+      </div>
+      <div class="keys">
+        <div class="key" id="one">1</div>
+        <div class="key" id="two">2</div>
+        <div class="key" id="three">3</div>
+        <div class="key" id="plus">+</div>
+        <div class="key" id="four">4</div>
+        <div class="key" id="five">5</div>
+        <div class="key" id="six">6</div>
+        <div class="key" id="minus">-</div>
+        <div class="key" id="seven">7</div>
+        <div class="key" id="eight">8</div>
+        <div class="key" id="nine">9</div>
+        <div class="key" id="clear">C</div>
+        <div class="key" id="zero">0</div>
+        <div class="key" id="equals">=</div>
+      </div>
+    </div>
+    <script>
+      const display = document.querySelector("#display");
+      const keys = document.querySelector(".keys");
+      keys.addEventListener("click", e => {
+        if (e.target.matches("div")) {
+          let key = e.target;
+          let action = key.dataset.action;
+          let keyContent = key.textContent;
+          let displayedNum = display.value;
+          let previousKeyType = calculator.dataset.previousKeyType;
+
+          if (!action) {
+            if (displayedNum === "0" || previousKeyType === "operator") {
+              display.value = keyContent;
+            } else {
+              display.value = displayedNum + keyContent;
+            }
+            calculator.dataset.previousKeyType = "number";
+          }
+
+          if
