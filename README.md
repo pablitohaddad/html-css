@@ -1,0 +1,4 @@
+# html-css
+
+
+Esse repositório marca o meu início nessa vida de programador. Tive aulas com o saudoso professor Guanabara e percebi que esse mundo é lindo e repleto de constantes mudanças. Hoje, estou focado em DataScience, mas ja brinquei com html-css.
